@@ -44,6 +44,7 @@ module.exports = function kindOf(val) {
     case 'Uint32Array': return 'uint32array';
     case 'Float32Array': return 'float32array';
     case 'Float64Array': return 'float64array';
+    default: return null;
   }
 
   if (isGeneratorObj(val)) {
@@ -59,6 +60,7 @@ module.exports = function kindOf(val) {
     case '[object Set Iterator]': return 'setiterator';
     case '[object String Iterator]': return 'stringiterator';
     case '[object Array Iterator]': return 'arrayiterator';
+    default: return null;
   }
 
   // other
